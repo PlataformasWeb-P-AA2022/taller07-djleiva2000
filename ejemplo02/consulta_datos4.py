@@ -29,10 +29,7 @@ clubs = session.query(Club).join(Jugador).\
         filter(Jugador.nombre.like("%Da%")).all()
 
 print("Consulta 1 ")
-"""
-Consulta 1 
-Club: nombre=Barcelona deporte=Fútbol fundación=1920
-"""
+
 for e in clubs: 
     print(e) 
 
@@ -49,17 +46,7 @@ registros = session.query(Club, Jugador).join(Jugador).\
         filter(Jugador.nombre.like("%Da%")).all()
  
 print("Consulta 2 ")
-"""
 
-Consulta 2 
-
-Club: nombre=Barcelona deporte=Fútbol fundación=1920
-Jugador: Damian Diaz - dorsal:10 - posición: mediocampo
-
-
-Club: nombre=Barcelona deporte=Fútbol fundación=1920
-Jugador: Dario Aymar - dorsal:2 - posición: defensa
-"""
 for registro in registros: 
     # el registro continen 
     # dos valores en un tupla
@@ -68,7 +55,6 @@ for registro in registros:
     # que cumplen con la condición
     print(registro[0]) # El nombre del club
     print(registro[1]) # El número del dorsal del jugador
-
 
 
 

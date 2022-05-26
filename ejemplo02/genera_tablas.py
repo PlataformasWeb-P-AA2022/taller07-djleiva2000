@@ -50,7 +50,7 @@ class Jugador(Base):
     club  = relationship("Club", back_populates="jugadores")
     
     def __repr__(self):
-        return "Jugador: %s - dorsal:%d - posición: %s" % (
+        return "Jugador: %s - dorsal:%s - posición: %s" % (
                 self.nombre, self.dorsal, self.posicion)
 
 Base.metadata.create_all(engine)
